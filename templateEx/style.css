@@ -1,0 +1,13 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --bg-color: whitesmoke;
+  --black : #000;
+  --white: #fff;
+  --intro-bg-color: rgba(27, 27, 27, .5);
+  --btn-bg: snow;
+  --btn-bg-hover: rgb(231, 229, 229);
+}

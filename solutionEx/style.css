@@ -1,0 +1,113 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --bg-color: whitesmoke;
+  --black : #000;
+  --white: #fff;
+  --intro-bg-color: rgba(27, 27, 27, .5);
+  --btn-bg: snow;
+  --btn-bg-hover: rgb(231, 229, 229);
+}
+
+body {
+  height: 100vh;
+  background-color: var(--bg-color);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  height: 500px;
+  margin: 50px;
+  box-shadow: 5px 5px 20px var(--black);
+  border-radius: 5px;
+  transition: 0.5s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+}
+
+.card:hover .intro {
+  background-color: var(--intro-bg-color);
+  height: 100%;
+  top: 0;
+}
+
+.card:hover .intro button {
+  display: block;
+}
+
+.card:hover .intro .description {
+  display: block;
+}
+
+img {
+  width: 400px;
+  height: 100%;
+}
+
+.intro {
+  height: 200px;
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+  position: absolute;
+  color: var(--white);
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+}
+
+.intro h2 {
+  font-size: 40px;
+  margin: 12px 0;
+}
+
+.intro .description {
+  display: none;
+}
+
+.intro button {
+  width: fit-content;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  background-color: var(--btn-bg);
+  margin-top: 12px;
+  display: none;
+}
+
+.intro button:hover {
+  background-color: var(--btn-bg-hover);
+  cursor: pointer;
+}
+
+/* Responsive */
+
+/* Mobil */
+@media screen and (max-width: 480px) {
+  .intro h2 {
+    font-size: 28px;
+  }
+
+  .card {
+    height: 400px;
+  }
+
+  img {
+    width: 300px;
+  }
+}
